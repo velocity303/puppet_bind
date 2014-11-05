@@ -1,0 +1,16 @@
+{
+  "name": "velocity303-bind",
+  "version": "0.1.0",
+  "author": "velocity303",
+  "summary": "A puppet module to set up and configure bind for DNS",
+  "license": "Apache 2.0",
+  "source": "https://bitbucket.org/velocity303/puppet_bind",
+  "project_page": "",
+  "issues_url": "",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ]
+}
