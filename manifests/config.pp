@@ -6,8 +6,8 @@ class bind::config {
     group  => $::bind::bind_group,
   }
   concat::fragment { 'named.conf_header':
-    target => $namedfile
+    target => $namedfile,
     source => "puppet:///modules/bind/${::bind::bind_conf}",
-    order  => '01'
+    order  => '01',
   }
 }
