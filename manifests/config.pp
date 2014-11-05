@@ -1,9 +1,13 @@
 class bind::config {
-  file {"${::bind::bind_confdir}/${::bind::bind_conf}":
+  $namedfile = "${::bind::bind_confdir}/${::bind::bind_conf}"
+  concat { $namedfile:
     ensure => file,
     owner  => $::bind::bind_owner,
     group  => $::bind::bind_group,
+  }
+  concat::fragment { 'named.conf_header':
+    target => $namedfile
     source => "puppet:///modules/bind/${::bind::bind_conf}",
-    notify => Service[ $::bind::bind_service ],
+    order  => '01'
   }
 }
