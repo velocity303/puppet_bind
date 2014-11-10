@@ -17,7 +17,7 @@ define bind::zone (
     content => "zone \"${name}\" IN {
 	type ${type};
 	file \"${file}\";
-};",
+};\n",
     order  => '10',
   }
 }
