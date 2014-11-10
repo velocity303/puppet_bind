@@ -1,7 +1,7 @@
 class bind::config {
   $namedfile = "${::bind::bind_confdir}/${::bind::bind_conf}"
   concat { $namedfile:
-    ensure => file,
+    ensure => present,
     owner  => $::bind::bind_owner,
     group  => $::bind::bind_group,
   }
