@@ -13,7 +13,7 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves. This is your 30 second elevator pitch for your module. Consider including OS/Puppet version it works with.       
+A module to install and configure bind including views and zones. This is compatible with Debian and Red Hat based systems and has been tested against Puppet 3.7. 
 
 ## Module Description
 
@@ -25,13 +25,11 @@ If your module has a range of functionality (installation, configuration, manage
 
 ### What bind affects
 
-* A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form. 
+This module will install the appropriate bind package on your operating system as well as edit the associated named.conf file that is associated with this package/service.
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements 
 
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
+This module reqiures puppetlabs-stdlib and puppetlabs-concat to function properly. These should be automatically pulled in via the 'puppet module install velocity303-bind' command.
 
 ### Beginning with bind
 
@@ -41,20 +39,18 @@ If your most recent release breaks compatibility or requires particular steps fo
 
 ## Usage
 
+WIP
 Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here. 
 
 ## Reference
 
+WIP
 Here, list the classes, types, providers, facts, etc contained in your module. This section should include all of the under-the-hood workings of your module so people know what the module is touching on their system but don't need to mess with things. (We are working on automating this section!)
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+This module has been built against debian and red hat based systems and should function normally in those environments.
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
-
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You may also add any additional sections you feel are necessary or important to include here. Please use the `## ` header. 
+Feel free to submit an issue if you would like to make any changes to the code.
