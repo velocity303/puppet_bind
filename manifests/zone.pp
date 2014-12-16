@@ -1,5 +1,5 @@
 define bind::zone (
-  name => "",
+  name => undef,
   type => master,
   file => "${::bind::bind_confdir}/${name}",
 ){
